@@ -436,6 +436,7 @@ runners:
   # runner configuration: https://docs.gitlab.com/runner/configuration/advanced-configuration.html
   config: |
     [[runners]]
+      url = "https://gitlab.com"
       [runners.kubernetes]
         namespace = "{{.Release.Namespace}}"
         image = "alpine"
