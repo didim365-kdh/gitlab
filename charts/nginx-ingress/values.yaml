@@ -485,8 +485,8 @@ controller:
 
     type: NodePort
     nodePorts:
-      http: 30080
-      https: 30443
+      http: 30986
+      https: 31150
       tcp:
         8080: 30808
     #nodePorts:
