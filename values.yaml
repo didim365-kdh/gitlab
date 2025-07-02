@@ -48,7 +48,7 @@ global:
     labels: {}
 
   ## https://docs.gitlab.com/charts/installation/deployment#deploy-the-community-edition
-  edition: ee
+  edition: ce
 
   ## https://docs.gitlab.com/charts/charts/globals#gitlab-version
   gitlabVersion: "18.1.1"
@@ -60,14 +60,20 @@ global:
     allowClusterRoles: true
   ## https://docs.gitlab.com/charts/charts/globals#configure-host-settings
   hosts:
-    domain: gitlab.com
+    domain: localhost.com
     hostSuffix:
     https: true
     externalIP:
     ssh:
-    gitlab: {}
-    minio: {}
-    registry: {}
+    gitlab:
+      name: gitlab.localhost.com
+      https: true
+    minio:
+      name: minio.localhost.com
+      https: true
+    registry:
+      name: registry.localhost.com
+      https: true
     tls: {}
     smartcard: {}
     kas: {}
@@ -77,10 +83,10 @@ global:
   ## https://docs.gitlab.com/charts/charts/globals#configure-ingress-settings
   ingress:
     apiVersion: ""
-    configureCertmanager: true
+    configureCertmanager: false
     useNewIngressForCerts: false
     provider: nginx
-    # class:
+    class: nginx
     annotations: {}
     enabled: true
     tls: {}
@@ -965,7 +971,7 @@ certmanager-issuer:
 ## Installation of certmananger.
 ## This value replaces `certmanager.install` to allow certmanager schema validation to pass.
 ## See dependencies in Chart.yaml for current version
-installCertmanager: true
+installCertmanager: false
 
 ## Configuration of jetstack/cert-manager
 certmanager:
@@ -980,7 +986,7 @@ certmanager:
 ## https://docs.gitlab.com/charts/architecture/decisions#nginx-ingress
 ## Installation & configuration of charts/ingress-nginx:
 nginx-ingress: &nginx-ingress
-  enabled: true
+  enabled: false
   tcpExternalConfig: "true"
   controller: &nginx-ingress-controller
     addHeaders:
@@ -1339,7 +1345,7 @@ shared-secrets:
 ## Installation & configuration of gitlab/gitlab-runner
 ## See dependencies in Chart.yaml for current version
 gitlab-runner:
-  install: true
+  install: false
   rbac:
     create: true
   runners:
