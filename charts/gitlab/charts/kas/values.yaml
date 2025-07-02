@@ -76,7 +76,7 @@ ingress:
   agentPath: /
   k8sApiPath: /k8s-proxy
   autoflowCodecServerApiPath: /autoflow/codec-server
-maxReplicas: 10
+maxReplicas: 2
 maxUnavailable: 1
 minReplicas: 2
 podLabels: {}
