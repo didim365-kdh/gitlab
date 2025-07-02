@@ -62,7 +62,7 @@ global:
   hosts:
     domain: gitlab.com
     hostSuffix:
-    https: true
+    https: false
     externalIP:
     ssh:
     gitlab: {}
@@ -77,7 +77,7 @@ global:
   ## https://docs.gitlab.com/charts/charts/globals#configure-ingress-settings
   ingress:
     apiVersion: ""
-    configureCertmanager: true
+    configureCertmanager: false
     useNewIngressForCerts: false
     provider: nginx
     # class:
@@ -980,7 +980,7 @@ certmanager:
 ## https://docs.gitlab.com/charts/architecture/decisions#nginx-ingress
 ## Installation & configuration of charts/ingress-nginx:
 nginx-ingress: &nginx-ingress
-  enabled: true
+  enabled: false
   tcpExternalConfig: "true"
   controller: &nginx-ingress-controller
     addHeaders:
