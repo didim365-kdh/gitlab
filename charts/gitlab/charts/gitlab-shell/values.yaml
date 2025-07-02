@@ -66,7 +66,7 @@ resources:
     memory: 6M
 maxUnavailable: 1
 minReplicas: 2
-maxReplicas: 10
+maxReplicas: 2
 
 # When using traefik ingress
 traefik:
