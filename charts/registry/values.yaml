@@ -246,7 +246,7 @@ maxUnavailable: 1
 # if minReplicas is >1, shared storage MUST be used.
 hpa:
   minReplicas: 2
-  maxReplicas: 10
+  maxReplicas: 2
   cpu:
     targetType: Utilization  # Utilization or AverageValue
     # targetAverageValue: 1
