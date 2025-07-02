@@ -481,14 +481,14 @@ controller:
       http: http
       https: https
 
-    type: LoadBalancer
+    #type: LoadBalancer
 
-    # type: NodePort
-    # nodePorts:
-    #   http: 32080
-    #   https: 32443
-    #   tcp:
-    #     8080: 32808
+    type: NodePort
+    nodePorts:
+      http: 30080
+      https: 30443
+      tcp:
+        8080: 30808
     nodePorts:
       http: ""
       https: ""
