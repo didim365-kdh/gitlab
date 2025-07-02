@@ -246,7 +246,7 @@ trusted_proxies: []
 
 # Global defaults
 minReplicas: 1
-maxReplicas: 10
+maxReplicas: 1
 concurrency: 20
 
 # `deployment.strategy` is utilized to configure the desired upgrade approach and
