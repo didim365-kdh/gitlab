@@ -20,7 +20,7 @@
 # - External NGINX
 # - External Object Storage providers
 # - PersistentVolume configuration
-
+#
 ## The global properties are used to configure multiple charts at once.
 ## https://docs.gitlab.com/charts/charts/globals
 global:
