@@ -89,9 +89,9 @@ global:
     class: nginx
     annotations: {}
     enabled: true
-    tls: {}
-    #   enabled: true
-    #   secretName:
+    tls:
+      enabled: true
+      secretName: gitlab-tls-secret
     path: /
     pathType: Prefix
 
@@ -1355,9 +1355,8 @@ gitlab-runner:
     secret: "nonempty"
     config: |
       [[runners]]
-      url = "http://gitlab.localhost.com"
+      url = "https://gitlab.localhost.com"
       executor = "kubernetes"
-      tls-skip-verify = true
         [runners.kubernetes]
         image = "ubuntu:22.04"
         tls-ca-file = "" 
@@ -1374,6 +1373,7 @@ gitlab-runner:
             BucketLocation = "us-east-1"
             Insecure = false
         {{ end }}
+    certsSecretName: gitlab-tls-secret
   podAnnotations:
     gitlab.com/prometheus_scrape: "true"
     gitlab.com/prometheus_port: 9252
