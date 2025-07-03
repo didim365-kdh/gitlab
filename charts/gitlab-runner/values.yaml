@@ -449,7 +449,7 @@ runners:
   hostAliases:
   - ip: "10.108.66.204"
     hostnames:
-      - "gitlab.10.111.70.9.nip.io"
+      - "gitlab.localhost.com"
 
   ## Absolute path for an existing runner configuration file
   ## Can be used alongside "volumes" and "volumeMounts" to use an external config file
@@ -646,7 +646,7 @@ extraEnvFrom: {}
 hostAliases:
   - ip: "10.108.66.204"
     hostnames:
-      - "gitlab.10.111.70.9.nip.io"
+      - "gitlab.localhost.com"
   # Example:
   # - ip: "127.0.0.1"
   #   hostnames:
