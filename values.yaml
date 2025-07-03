@@ -1377,7 +1377,7 @@ gitlab-runner:
     gitlab.com/prometheus_port: 9252
   podSpec:
     hostAliases:
-    - ip: "10.108.66.204"
+      - ip: "10.108.66.204"
       hostnames:
         - "gitlab.localhost.com"
   podSecurityContext:
