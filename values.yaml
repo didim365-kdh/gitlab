@@ -63,7 +63,7 @@ global:
     domain: localhost.com
     hostSuffix:
     https: true
-    externalIP:
+    externalIP: 14.63.186.98
     ssh:
     gitlab:
       name: gitlab.localhost.com
