@@ -1357,6 +1357,7 @@ gitlab-runner:
       [[runners]]
       url = "http://gitlab.localhost.com"
       executor = "kubernetes"
+      tls-skip-verify = true
         [runners.kubernetes]
         image = "ubuntu:22.04"
         {{- if .Values.global.minio.enabled }}
