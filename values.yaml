@@ -1378,8 +1378,8 @@ gitlab-runner:
   podSpec:
     hostAliases:
       - ip: "10.108.66.204"
-      hostnames:
-        - "gitlab.localhost.com"
+        hostnames:
+          - "gitlab.localhost.com"
   podSecurityContext:
     seccompProfile:
       type: "RuntimeDefault"
