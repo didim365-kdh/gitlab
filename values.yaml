@@ -1355,7 +1355,7 @@ gitlab-runner:
     secret: "nonempty"
     config: |
       [[runners]]
-        url = "http://gitlab.localhost.com"
+      url = "http://gitlab.localhost.com"
         [runners.kubernetes]
         image = "ubuntu:22.04"
         {{- if .Values.global.minio.enabled }}
