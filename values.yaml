@@ -1360,9 +1360,6 @@ gitlab-runner:
       tls-skip-verify = true
         [runners.kubernetes]
         image = "ubuntu:22.04"
-        tls-ca-file = "" 
-        tls-cert-file = ""
-        tls-key-file = ""
         {{- if .Values.global.minio.enabled }}
         [runners.cache]
           Type = "s3"
