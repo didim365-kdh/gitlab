@@ -1355,7 +1355,7 @@ gitlab-runner:
     secret: "nonempty"
     config: |
       [[runners]]
-      url = "http://gitlab.localhost.com"
+      url = "https://gitlab.localhost.com"
       executor = "kubernetes"
       tls-skip-verify = true
         [runners.kubernetes]
