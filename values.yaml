@@ -67,7 +67,7 @@ global:
     ssh:
     gitlab:
       name: gitlab.localhost.com
-      https: false
+      https: true
     minio:
       name: minio.localhost.com
       https: true
