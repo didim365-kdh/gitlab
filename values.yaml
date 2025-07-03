@@ -1383,7 +1383,11 @@ gitlab-runner:
   podSecurityContext:
     seccompProfile:
       type: "RuntimeDefault"
-
+podSpec:
+  hostAliases:
+    - ip: "10.108.66.204"
+    hostnames:
+      - "gitlab.localhost.com"
 traefik:
   install: false
   ports:
