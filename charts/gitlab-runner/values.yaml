@@ -70,7 +70,8 @@ gitlabUrl: http://10.111.70.9:8080
 ## be retrieved from your GitLab instance. It is the token of an already registered runner.
 ## ref: (we don't have docs for that yet, but we want to use an existing token)
 ##
-runnerToken: "GR1348941cXsVNq4p-xH347M_u9rv"
+#runnerToken: "GR1348941cXsVNq4p-xH347M_u9rv"
+runnerRegistrationToken: "GR1348941kKmB7yw8txKGqvWYeRV-"
 #
 
 ## Unregister all runners before termination
