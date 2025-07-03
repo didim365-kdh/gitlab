@@ -1355,8 +1355,9 @@ gitlab-runner:
     secret: "nonempty"
     config: |
       [[runners]]
-      url = "https://gitlab.localhost.com"
+      url = "http://gitlab.localhost.com"
       executor = "kubernetes"
+      tls-skip-verify = true
         [runners.kubernetes]
         image = "ubuntu:22.04"
         tls-ca-file = "" 
@@ -1386,7 +1387,7 @@ gitlab-runner:
       - name: gitlab-runner
         env:
           - name: GITLAB_TLS_SKIP_VERIFY
-            value: "true"  # 인증서 검증 우회
+            value: "true"
   podSecurityContext:
     seccompProfile:
       type: "RuntimeDefault"
