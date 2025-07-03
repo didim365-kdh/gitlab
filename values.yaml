@@ -60,19 +60,19 @@ global:
     allowClusterRoles: true
   ## https://docs.gitlab.com/charts/charts/globals#configure-host-settings
   hosts:
-    domain: 10.111.70.9.nip.io
+    domain: localhost.com
     hostSuffix:
     https: true
     externalIP:
     ssh:
     gitlab:
-      name: gitlab.10.111.70.9.nip.io
+      name: gitlab.localhost.com
       https: true
     minio:
-      name: minio.10.111.70.9.nip.io
+      name: minio.localhost.com
       https: true
     registry:
-      name: registry.10.111.70.9.nip.io
+      name: registry.localhost.com
       https: true
     tls: {}
     smartcard: {}
@@ -1355,7 +1355,7 @@ gitlab-runner:
     secret: "nonempty"
     config: |
       [[runners]]
-      url = "http://gitlab.10.111.70.9.nip.io"
+      url = "http://gitlab.localhost.com"
       executor = "kubernetes"
       tls-skip-verify = true
         [runners.kubernetes]
@@ -1379,7 +1379,7 @@ gitlab-runner:
     hostAliases:
       - ip: "10.108.66.204"
         hostnames:
-          - "gitlab.10.111.70.9.nip.io"
+          - "gitlab.localhost.com"
   podSecurityContext:
     seccompProfile:
       type: "RuntimeDefault"
