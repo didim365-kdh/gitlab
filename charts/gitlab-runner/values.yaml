@@ -436,6 +436,7 @@ runners:
   # runner configuration: https://docs.gitlab.com/runner/configuration/advanced-configuration.html
   config: |
     [[runners]]
+    tls-skip-verify = true
       [runners.kubernetes]
         namespace = "{{.Release.Namespace}}"
         image = "alpine"
