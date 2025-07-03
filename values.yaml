@@ -67,7 +67,7 @@ global:
     ssh:
     gitlab:
       name: gitlab.localhost.com
-      https: true
+      https: false
     minio:
       name: minio.localhost.com
       https: true
@@ -1355,7 +1355,7 @@ gitlab-runner:
     secret: "nonempty"
     config: |
       [[runners]]
-      url = "https://gitlab.localhost.com"
+      url = "http://gitlab.localhost.com"
       executor = "kubernetes"
       tls-skip-verify = true
         [runners.kubernetes]
