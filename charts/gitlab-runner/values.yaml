@@ -64,8 +64,8 @@ readinessProbe: {}
 ## The GitLab Server URL (with protocol) that want to register the runner against
 ## ref: https://docs.gitlab.com/runner/commands/index.html#gitlab-runner-register
 ##
-gitlabUrl: http://10.111.70.9:8080
-#gitlabUrl: http://gitlab.localhost.com
+#gitlabUrl: http://10.111.70.9:8080
+gitlabUrl: https://gitlab.localhost.com
 
 ## The Runner Token for adding new Runners to the GitLab Server. This must
 ## be retrieved from your GitLab instance. It is the token of an already registered runner.
@@ -447,7 +447,7 @@ runners:
     value: https://gitlab.com
     
   hostAliases:
-  - ip: "10.108.66.204"
+  - ip: "14.63.186.98"
     hostnames:
       - "gitlab.localhost.com"
 
@@ -644,7 +644,7 @@ extraEnvFrom: {}
 
 ## list of hosts and IPs that will be injected into the pod's hosts file
 hostAliases:
-  - ip: "10.108.66.204"
+  - ip: "14.63.186.98"
     hostnames:
       - "gitlab.localhost.com"
   # Example:
