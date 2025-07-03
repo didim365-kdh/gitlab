@@ -1381,7 +1381,12 @@ gitlab-runner:
     hostAliases:
     - ip: "10.108.66.204"
       hostnames:
-        - "gitlab.localhost.com"   
+        - "gitlab.localhost.com"
+    containers:
+      - name: gitlab-runner
+        env:
+          - name: GITLAB_TLS_SKIP_VERIFY
+            value: "true"  # 인증서 검증 우회
   podSecurityContext:
     seccompProfile:
       type: "RuntimeDefault"
