@@ -635,7 +635,10 @@ extraEnvFrom: {}
   #     key: secretkey
 
 ## list of hosts and IPs that will be injected into the pod's hosts file
-hostAliases: []
+hostAliases:
+  - ip: "10.108.66.204"
+    hostnames:
+      - "gitlab.localhost.com"
   # Example:
   # - ip: "127.0.0.1"
   #   hostnames:
