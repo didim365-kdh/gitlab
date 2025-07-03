@@ -1360,10 +1360,7 @@ gitlab-runner:
       tls-skip-verify = true
         [runners.kubernetes]
         image = "ubuntu:22.04"
-        dns_config:
-          options:
-            - name: "ndots"
-              value: "1"
+        dns_config = { options = [ { name = "ndots", value = "1" } ] }
         {{- if .Values.global.minio.enabled }}
         [runners.cache]
           Type = "s3"
