@@ -1357,7 +1357,7 @@ gitlab-runner:
       [[runners]]
         [runners.kubernetes]
         image = "ubuntu:22.04"
-        url = "https://gitlab.localhost.com"
+        url = "gitlab.localhost.com"
         {{- if .Values.global.minio.enabled }}
         [runners.cache]
           Type = "s3"
