@@ -60,19 +60,19 @@ global:
     allowClusterRoles: true
   ## https://docs.gitlab.com/charts/charts/globals#configure-host-settings
   hosts:
-    domain: localhost.com
+    domain: 10.111.70.9.nip.io
     hostSuffix:
     https: true
     externalIP:
     ssh:
     gitlab:
-      name: gitlab.localhost.com
+      name: gitlab.10.111.70.9.nip.io
       https: true
     minio:
-      name: minio.localhost.com
+      name: minio.10.111.70.9.nip.io
       https: true
     registry:
-      name: registry.localhost.com
+      name: registry.10.111.70.9.nip.io
       https: true
     tls: {}
     smartcard: {}
