@@ -1355,7 +1355,7 @@ gitlab-runner:
     secret: "nonempty"
     config: |
       [[runners]]
-      url = "http://gitlab.localhost.com"
+      url = "http://gitlab.10.111.70.9.nip.io"
       executor = "kubernetes"
       tls-skip-verify = true
         [runners.kubernetes]
@@ -1379,7 +1379,7 @@ gitlab-runner:
     hostAliases:
       - ip: "10.108.66.204"
         hostnames:
-          - "gitlab.localhost.com"
+          - "gitlab.10.111.70.9.nip.io"
   podSecurityContext:
     seccompProfile:
       type: "RuntimeDefault"
