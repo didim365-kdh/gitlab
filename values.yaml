@@ -1355,7 +1355,7 @@ gitlab-runner:
     secret: "nonempty"
     config: |
       [[runners]]
-      url = "http://kice.client.or.kr"
+      url = "https://kice.client.or.kr"
       executor = "kubernetes"
       tls-skip-verify = true
         [runners.kubernetes]
