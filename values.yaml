@@ -60,20 +60,20 @@ global:
     allowClusterRoles: true
   ## https://docs.gitlab.com/charts/charts/globals#configure-host-settings
   hosts:
-    domain: localhost.com
+    domain: client.or.kr
     hostSuffix:
-    https: true
+    https: false
     externalIP: 14.63.186.98
     ssh:
     gitlab:
-      name: gitlab.localhost.com
-      https: true
+      name: kice.client.or.kr
+      https: false
     minio:
-      name: minio.localhost.com
-      https: true
+      name: minio.client.or.kr
+      https: false
     registry:
-      name: registry.localhost.com
-      https: true
+      name: registry.client.or.kr
+      https: false
     tls: {}
     smartcard: {}
     kas: {}
@@ -1355,7 +1355,7 @@ gitlab-runner:
     secret: "nonempty"
     config: |
       [[runners]]
-      url = "http://gitlab.localhost.com"
+      url = "http://kice.client.or.kr"
       executor = "kubernetes"
       tls-skip-verify = true
         [runners.kubernetes]
@@ -1380,7 +1380,7 @@ gitlab-runner:
     hostAliases:
       - ip: "10.108.66.204"
         hostnames:
-          - "gitlab.localhost.com"
+          - "kice.client.or.kr"
   podSecurityContext:
     seccompProfile:
       type: "RuntimeDefault"
