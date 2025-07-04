@@ -90,8 +90,8 @@ global:
     annotations: {}
     enabled: true
     tls:
-      enabled: false
-      secretName: gitlab-tls-secret
+      enabled: true
+      secretName: tls-secret
     path: /
     pathType: Prefix
 
