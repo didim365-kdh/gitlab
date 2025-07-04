@@ -62,18 +62,18 @@ global:
   hosts:
     domain: client.or.kr
     hostSuffix:
-    https: false
+    https: true
     externalIP: 14.63.186.98
     ssh:
     gitlab:
       name: kice.client.or.kr
-      https: false
+      https: true
     minio:
       name: minio.client.or.kr
-      https: false
+      https: true
     registry:
       name: registry.client.or.kr
-      https: false
+      https: true
     tls: {}
     smartcard: {}
     kas: {}
