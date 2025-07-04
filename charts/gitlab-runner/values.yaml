@@ -433,7 +433,7 @@ runners:
   config: |
     [[runners]]
       name = "my-runner"
-      url = "http://gitlab.localhost.com"   
+      url = "http://kice.client.or.kr"   
       token = "GR1348941kKmB7yw8txKGqvWYeRV-"
       tls-skip-verify = true
       executor = "kubernetes"
@@ -442,11 +442,11 @@ runners:
         image = "alpine"
   env:
     - name: CI_SERVER_URL
-      value: http://gitlab.localhost.com  
+      value: http://kice.client.or.kr  
   hostAliases:
     - ip: "10.111.70.9"
       hostnames:
-        - "gitlab.localhost.com"
+        - "kice.client.or.kr"
 #runners:
   # runner configuration, where the multi line string is evaluated as a
   # template so you can specify helm values inside of it.
@@ -466,7 +466,7 @@ runners:
   #hostAliases:
   #- ip: "14.63.186.98"
   #  hostnames:
-  #    - "gitlab.localhost.com"
+  #    - "kice.client.or.kr"
 
   ## Absolute path for an existing runner configuration file
   ## Can be used alongside "volumes" and "volumeMounts" to use an external config file
@@ -663,7 +663,7 @@ extraEnvFrom: {}
 hostAliases:
   - ip: "14.63.186.98"
     hostnames:
-      - "gitlab.localhost.com"
+      - "kice.client.or.kr"
   # Example:
   # - ip: "127.0.0.1"
   #   hostnames:
