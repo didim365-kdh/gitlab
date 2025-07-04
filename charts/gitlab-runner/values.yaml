@@ -430,25 +430,43 @@ service:
 ## Configuration for the Pods that the runner launches for each new job
 ##
 runners:
+  config: |
+    [[runners]]
+      name = "my-runner"
+      url = "http://gitlab.localhost.com"   
+      token = "GR1348941kKmB7yw8txKGqvWYeRV-"
+      tls-skip-verify = true
+      executor = "kubernetes"
+      [runners.kubernetes]
+        namespace = "{{.Release.Namespace}}"
+        image = "alpine"
+  env:
+    - name: CI_SERVER_URL
+      value: http://gitlab.localhost.com  
+  hostAliases:
+    - ip: "10.111.70.9"
+      hostnames:
+        - "gitlab.localhost.com"
+#runners:
   # runner configuration, where the multi line string is evaluated as a
   # template so you can specify helm values inside of it.
   #
   # tpl: https://helm.sh/docs/howto/charts_tips_and_tricks/#using-the-tpl-function
   # runner configuration: https://docs.gitlab.com/runner/configuration/advanced-configuration.html
-  config: |
-    [[runners]]
-    tls-skip-verify = true
-      [runners.kubernetes]
-        namespace = "{{.Release.Namespace}}"
-        image = "alpine"
-  env:
-  - name: CI_SERVER_URL
-    value: https://gitlab.com
+ # config: |
+ #   [[runners]]
+ #   tls-skip-verify = true
+ #     [runners.kubernetes]
+ #       namespace = "{{.Release.Namespace}}"
+ #       image = "alpine"
+ # env:
+ # - name: CI_SERVER_URL
+ #   value: https://gitlab.com
     
-  hostAliases:
-  - ip: "14.63.186.98"
-    hostnames:
-      - "gitlab.localhost.com"
+  #hostAliases:
+  #- ip: "14.63.186.98"
+  #  hostnames:
+  #    - "gitlab.localhost.com"
 
   ## Absolute path for an existing runner configuration file
   ## Can be used alongside "volumes" and "volumeMounts" to use an external config file
