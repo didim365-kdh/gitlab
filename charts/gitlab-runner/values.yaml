@@ -447,9 +447,6 @@ runners:
     - ip: "10.111.70.9"
       hostnames:
         - "kice.client.or.kr"
-  services:
-    - name: docker:19.03.12-dind
-      entrypoint: ["/bin/sh", "-c", "dockerd-entrypoint.sh --host=tcp://0.0.0.0:2375"]
       
 #runners:
   # runner configuration, where the multi line string is evaluated as a
