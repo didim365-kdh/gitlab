@@ -810,7 +810,7 @@ extraObjects: []
 #        exec:
 #          command: [ "sh", "-c", "until docker info; do sleep 1; done;" ]
       
-extraContainers:
+additionalContainers:
   - name: docker
     image: docker:20.10-dind
     securityContext:
