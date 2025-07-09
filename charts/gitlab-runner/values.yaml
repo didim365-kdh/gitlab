@@ -71,7 +71,7 @@ gitlabUrl: http://10.109.205.75:8080
 ## ref: (we don't have docs for that yet, but we want to use an existing token)
 ##
 #runnerToken: "GR1348941cXsVNq4p-xH347M_u9rv"
-runnerRegistrationToken: "GR1348941kKmB7yw8txKGqvWYeRV-"
+runnerRegistrationToken: "GR1348941qFNN9hUUbGg-4F2PMxKb"
 #
 
 ## Unregister all runners before termination
