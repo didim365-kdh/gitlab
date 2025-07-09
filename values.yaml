@@ -1362,6 +1362,10 @@ gitlab-runner:
         image = "ubuntu:22.04"
         dns_config = { options = [ { name = "ndots", value = "1" } ] }
         {{- if .Values.global.minio.enabled }}
+        image = "quay.io/podman/stable:latest"
+        container = {
+          privileged = true  # Podman 실행에 필요한 privileged 권한 설정
+        }
         [runners.cache]
           Type = "s3"
           Path = "gitlab-runner"
