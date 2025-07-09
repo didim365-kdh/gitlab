@@ -809,7 +809,7 @@ extraObjects: []
 #      postStart:
 #        exec:
 #          command: [ "sh", "-c", "until docker info; do sleep 1; done;" ]
-additonalContainers:
+additionalContainers:
   - name: docker
     image: docker:20.10-dind
     securityContext:
@@ -820,5 +820,11 @@ additonalContainers:
     lifecycle:
       postStart:
         exec:
-          command: [ "sh", "-c", "until docker info; do sleep 1; done;" ]
+          command: [ "sh", "-c", "until docker info; do sleep 1; done; echo Docker is ready!" ]
+
+volumes:
+  - name: dind-socket
+    hostPath:
+      path: /var/run/docker.sock
+      
 extraContainers: []
