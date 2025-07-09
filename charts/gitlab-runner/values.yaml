@@ -550,8 +550,8 @@ runners:
 ##
 securityContext:
   allowPrivilegeEscalation: true
-  readOnlyRootFilesystem: true
-  runAsNonRoot: true
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
   privileged: true
   capabilities:
     drop: ["ALL"]
