@@ -816,7 +816,7 @@ additionalContainers:
     securityContext:
       privileged: true  # Privileged 모드로 실행
     volumeMounts:
-      - mountPath: /var/run/
+      - mountPath: /var/run/docker.sock
         name: dind-socket  # Docker 소켓을 공유
     lifecycle:
       postStart:
