@@ -825,6 +825,6 @@ additionalContainers:
 volumes:
   - name: dind-socket
     hostPath:
-      path: /var/run/docker.sock
+      path: /var/run/docker.sock  # 마스터 노드에서 Docker 소켓을 공유
       
 extraContainers: []
