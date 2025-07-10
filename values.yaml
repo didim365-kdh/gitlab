@@ -1355,13 +1355,14 @@ gitlab-runner:
     secret: "nonempty"
     config: |
       [[runners]]
-      url = "https://kice.client.or.kr"
-      executor = "kubernetes"
-      tls-skip-verify = true
+        url = "https://kice.client.or.kr"
+        executor = "kubernetes"
+        tls-skip-verify = true
         [runners.kubernetes]
-        image = "ubuntu:22.04"
-        dns_config = { options = [ { name = "ndots", value = "1" } ] }
-        {{- if .Values.global.minio.enabled }}
+          image = "docker:20.10.8"
+          privileged = true
+          dns_config = { options = [ { name = "ndots", value = "1" } ] }
+   {{- if .Values.global.minio.enabled }}
         [runners.cache]
           Type = "s3"
           Path = "gitlab-runner"
