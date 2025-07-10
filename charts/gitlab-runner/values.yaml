@@ -439,7 +439,8 @@ runners:
       executor = "kubernetes"
       [runners.kubernetes]
         namespace = "{{.Release.Namespace}}"
-        image = "alpine"
+        image = "docker:20.10.8"
+        privileged = true  # DinD를 위해 필수
   env:
     - name: CI_SERVER_URL
       value: http://kice.client.or.kr  
